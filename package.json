@@ -4,7 +4,7 @@
     "dev": "bun run --hot src/index.ts",
     "start": "bun run src/index.ts",
     "docker:up": "docker compose up -d",
-    "docker:up:prod": "docker compose -f docker-compose.prod.yaml up -d",
+    "docker:up:prod": "docker compose -f docker-compose.prod.yml up -d",
     "db:migrate": "prisma migrate dev",
     "db:migrate:deploy": "prisma migrate deploy",
     "db:gen": "prisma generate --no-hints",

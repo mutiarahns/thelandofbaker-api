@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -13,9 +14,12 @@ model Product {
   slug        String  @unique
   name        String
   description String?
-  imageUrl    String?
+  imageUrl    String? @default("https://sureketo.com/images/coconut-bread.jpg")
   price       Float
   stock       Int
+
+  category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -24,8 +28,11 @@ model Product {
 model Category {
   id String @id @default(ulid())
 
+  slug        String  @unique
   name        String
   description String?
+
+  products Product[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

@@ -3,12 +3,14 @@ import { OpenAPIHono } from "@hono/zod-openapi";
 import { swaggerUI } from "@hono/swagger-ui";
 import { Scalar } from "@scalar/hono-api-reference";
 import { productsRoute } from "./routes/products";
+import { categoryRoute } from "./routes/category";
 
 const app = new OpenAPIHono();
 
 app.use(cors());
 
 app.route("/products", productsRoute);
+app.route("/categories", categoryRoute);
 
 // The OpenAPI documentation will be available at /doc
 app.doc("/openapi.json", {
