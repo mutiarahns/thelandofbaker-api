@@ -1,6 +1,6 @@
-import { PrismaClient } from "@prisma/client";
-import { dataProducts } from "./data/products";
+import { PrismaClient } from "../src/generated/prisma";
 import { createNewSlug } from "../src/utils/slugify";
+import { dataProducts } from "./data/products";
 
 const prisma = new PrismaClient();
 
