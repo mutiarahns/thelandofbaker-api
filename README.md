@@ -7,9 +7,9 @@ The Land of Baker API uses REST API endpoints to communicate with the backend.
 | Endpoint          | Method | Description                  |
 | ----------------- | ------ | ---------------------------- |
 | /products         | GET    | Get all products             |
-| /products/:id     | GET    | Get product by id            |
+| /products/:slug   | GET    | Get product by slug          |
 | /products         | POST   | Create a new product         |
-| /products/:id     | PUT    | Update a product by id       |
+| /products/:id     | PATCH  | Update a product by id       |
 | /products/:id     | DELETE | Delete a product by id       |
 | /search?q=keyword | GET    | Search for products by query |
 
