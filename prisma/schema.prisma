@@ -14,7 +14,7 @@ model Product {
   slug        String  @unique
   name        String
   description String?
-  imageUrl    String?
+  imageUrl    String? @default("https://sureketo.com/images/coconut-bread.jpg")
   price       Float
   stock       Int
 

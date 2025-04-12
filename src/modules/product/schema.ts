@@ -3,12 +3,15 @@ import { CategorySchema } from "../category/schema";
 
 export const ProductSchema = z.object({
   id: z.string(),
-  slug: z.string(),
-  name: z.string(),
+  slug: z.string().min(1),
+  name: z.string().min(1),
   description: z.string().nullable(),
-  imageUrl: z.string().nullable(),
-  price: z.number().default(0),
-  stock: z.number().default(0),
+  imageUrl: z
+    .string()
+    .nullable()
+    .default("https://sureketo.com/images/coconut-bread.jpg"),
+  price: z.number().min(0).default(0),
+  stock: z.number().min(0).default(0),
   createdAt: z.date(),
   updatedAt: z.date(),
   categoryId: z.string().nullable(),

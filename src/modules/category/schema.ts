@@ -2,8 +2,8 @@ import { z } from "@hono/zod-openapi";
 
 export const CategorySchema = z.object({
   id: z.string(),
-  slug: z.string(),
-  name: z.string(),
+  slug: z.string().min(1),
+  name: z.string().min(1),
   description: z.string().nullable(),
 });
 
