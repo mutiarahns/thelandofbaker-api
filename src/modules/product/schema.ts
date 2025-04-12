@@ -8,7 +8,7 @@ export const ProductSchema = z.object({
   imageUrl: z.string(),
   price: z.number().default(0),
   stock: z.number().default(0),
-  categoryId: z.string().default(""),
+  categoryId: z.string().nullable(),
   createdAt: z.date(),
   updatedAt: z.date(),
 });
@@ -21,6 +21,7 @@ export const CreateProductSchema = ProductSchema.omit({
   updatedAt: true,
 }).extend({
   slug: z.string().optional(),
+  categoryId: z.string().optional(),
 });
 
 export const CreateProductsSchema = z.array(CreateProductSchema);

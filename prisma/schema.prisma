@@ -10,14 +10,12 @@ datasource db {
 model Product {
   id String @id @default(ulid())
 
-  slug        String   @unique
+  slug        String  @unique
   name        String
   description String?
-  imageUrl    String
+  imageUrl    String?
   price       Float
   stock       Int
-  category    Category @relation(fields: [categoryId], references: [id])
-  categoryId  String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -28,7 +26,6 @@ model Category {
 
   name        String
   description String?
-  products    Product[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
