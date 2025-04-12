@@ -4,14 +4,14 @@
 
 The Land of Baker API uses REST API endpoints to communicate with the backend.
 
-| Endpoint                    | Method | Description                  |
-| --------------------------- | ------ | ---------------------------- |
-| /api/products               | GET    | Get all products             |
-| /api/products/:id           | GET    | Get product by id            |
-| /api/products               | POST   | Create a new product         |
-| /api/products/:id           | PUT    | Update a product by id       |
-| /api/products/:id           | DELETE | Delete a product by id       |
-| /api/products/search/:query | GET    | Search for products by query |
+| Endpoint          | Method | Description                  |
+| ----------------- | ------ | ---------------------------- |
+| /products         | GET    | Get all products             |
+| /products/:id     | GET    | Get product by id            |
+| /products         | POST   | Create a new product         |
+| /products/:id     | PUT    | Update a product by id       |
+| /products/:id     | DELETE | Delete a product by id       |
+| /search?q=keyword | GET    | Search for products by query |
 
 To install dependencies:
 
