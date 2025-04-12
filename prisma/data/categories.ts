@@ -1,29 +1,29 @@
 import { z } from "@hono/zod-openapi";
-import { CreateCategoriesSchema } from "../../src/modules/category/schema";
+import { SeedCategoriesSchema } from "../../src/modules/category/schema";
 
-export const dataCategory: z.infer<typeof CreateCategoriesSchema> = [
+export const dataCategories: z.infer<typeof SeedCategoriesSchema> = [
   {
-    id: "1",
+    slug: "cookies",
     name: "Cookies",
     description: "Cookies",
   },
   {
-    id: "2",
+    slug: "cakes",
     name: "Cakes",
     description: "Cakes",
   },
   {
-    id: "3",
+    slug: "breads",
     name: "Breads",
     description: "Breads",
   },
   {
-    id: "4",
+    slug: "pastry",
     name: "Pastry",
     description: "Pastry",
   },
   {
-    id: "5",
+    slug: "pudding",
     name: "Pudding",
     description: "Pudding",
   },
